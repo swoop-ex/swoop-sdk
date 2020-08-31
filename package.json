@@ -22,6 +22,7 @@
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
+    "@harmony-js/core": "^0.1.53",
     "@uniswap/v2-core": "^1.0.0",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",

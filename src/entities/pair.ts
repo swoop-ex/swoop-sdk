@@ -4,6 +4,7 @@ import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
 import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
+import { ChainID } from '@harmony-js/utils';
 
 import {
   BigintIsh,
@@ -15,8 +16,8 @@ import {
   FIVE,
   _997,
   _1000,
-  ChainId
 } from '../constants'
+
 import { sqrt, parseBigintIsh } from '../utils'
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors'
 import { Token } from './token'
@@ -95,7 +96,7 @@ export class Pair {
   /**
    * Returns the chain ID of the tokens in the pair.
    */
-  public get chainId(): ChainId {
+  public get chainId(): ChainID {
     return this.token0.chainId
   }
 

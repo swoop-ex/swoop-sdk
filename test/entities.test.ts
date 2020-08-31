@@ -1,13 +1,14 @@
 import invariant from 'tiny-invariant'
-import { ChainId, WONE as _WONE, TradeType, Rounding, Token, TokenAmount, Pair, Route, Trade } from '../src'
+import { ChainID } from '@harmony-js/utils';
+import { WONE as _WONE, TradeType, Rounding, Token, TokenAmount, Pair, Route, Trade } from '../src'
 
 const ADDRESSES = [
   '0x0000000000000000000000000000000000000001',
   '0x0000000000000000000000000000000000000002',
   '0x0000000000000000000000000000000000000003'
 ]
-const CHAIN_ID = ChainId.TESTNET
-const WONE = _WONE[ChainId.TESTNET]
+const CHAIN_ID = ChainID.HmyTestnet
+const WONE = _WONE[ChainID.HmyTestnet]
 const DECIMAL_PERMUTATIONS: [number, number, number][] = [
   [0, 0, 0],
   [0, 9, 18],

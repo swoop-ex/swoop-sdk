@@ -1,6 +1,8 @@
 import invariant from 'tiny-invariant'
 
-import { ChainId, ONE, TradeType, ZERO } from '../constants'
+import { ChainID } from '@harmony-js/utils';
+
+import { ONE, TradeType, ZERO } from '../constants'
 import { sortedInsert } from '../utils'
 import { Currency, HARMONY } from './currency'
 import { CurrencyAmount } from './fractions/currencyAmount'
@@ -87,13 +89,13 @@ export interface BestTradeOptions {
  * In other words, if the currency is HARMONY, returns the WONE token amount for the given chain. Otherwise, returns
  * the input currency amount.
  */
-function wrappedAmount(currencyAmount: CurrencyAmount, chainId: ChainId): TokenAmount {
+function wrappedAmount(currencyAmount: CurrencyAmount, chainId: ChainID): TokenAmount {
   if (currencyAmount instanceof TokenAmount) return currencyAmount
   if (currencyAmount.currency === HARMONY) return new TokenAmount(WONE[chainId], currencyAmount.raw)
   invariant(false, 'CURRENCY')
 }
 
-function wrappedCurrency(currency: Currency, chainId: ChainId): Token {
+function wrappedCurrency(currency: Currency, chainId: ChainID): Token {
   if (currency instanceof Token) return currency
   if (currency === HARMONY) return WONE[chainId]
   invariant(false, 'CURRENCY')
@@ -260,7 +262,7 @@ export class Trade {
     invariant(pairs.length > 0, 'PAIRS')
     invariant(maxHops > 0, 'MAX_HOPS')
     invariant(originalAmountIn === currencyAmountIn || currentPairs.length > 0, 'INVALID_RECURSION')
-    const chainId: ChainId | undefined =
+    const chainId: ChainID | undefined =
       currencyAmountIn instanceof TokenAmount
         ? currencyAmountIn.token.chainId
         : currencyOut instanceof Token
@@ -348,7 +350,7 @@ export class Trade {
     invariant(pairs.length > 0, 'PAIRS')
     invariant(maxHops > 0, 'MAX_HOPS')
     invariant(originalAmountOut === currencyAmountOut || currentPairs.length > 0, 'INVALID_RECURSION')
-    const chainId: ChainId | undefined =
+    const chainId: ChainID | undefined =
       currencyAmountOut instanceof TokenAmount
         ? currencyAmountOut.token.chainId
         : currencyIn instanceof Token

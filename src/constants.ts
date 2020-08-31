@@ -3,10 +3,10 @@ import JSBI from 'jsbi'
 // exports for external consumption
 export type BigintIsh = JSBI | bigint | string
 
-export enum ChainId {
+/*export enum ChainId {
   MAINNET = 1,
   TESTNET = 2
-}
+}*/
 
 export enum TradeType {
   EXACT_INPUT,

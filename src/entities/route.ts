@@ -1,4 +1,4 @@
-import { ChainId } from '../constants'
+import { ChainID } from '@harmony-js/utils';
 import invariant from 'tiny-invariant'
 
 import { Currency, HARMONY } from './currency'
@@ -46,7 +46,7 @@ export class Route {
     this.output = output ?? path[path.length - 1]
   }
 
-  public get chainId(): ChainId {
+  public get chainId(): ChainID {
     return this.pairs[0].chainId
   }
 }

@@ -1,5 +1,5 @@
 import invariant from 'tiny-invariant'
-import { ChainId } from '../constants'
+import { ChainID } from '@harmony-js/utils';
 import { validateAndParseAddress } from '../utils'
 import { Currency } from './currency'
 
@@ -7,10 +7,10 @@ import { Currency } from './currency'
  * Represents an ERC20 token with a unique address and some metadata.
  */
 export class Token extends Currency {
-  public readonly chainId: ChainId
+  public readonly chainId: ChainID
   public readonly address: string
 
-  public constructor(chainId: ChainId, address: string, decimals: number, symbol?: string, name?: string) {
+  public constructor(chainId: ChainID, address: string, decimals: number, symbol?: string, name?: string) {
     super(decimals, symbol, name)
     this.chainId = chainId
     this.address = validateAndParseAddress(address)
@@ -57,16 +57,115 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 }
 
 export const WONE = {
-  [ChainId.MAINNET]: new Token(
-    ChainId.MAINNET,
+  [ChainID.HmyMainnet]: new Token(
+    ChainID.HmyMainnet,
     '0x92bEad480f51B3513dA9c419C850613Ac50bd6ad',
     18,
     'WONE',
     'Wrapped ONE'
   ),
-  [ChainId.TESTNET]: new Token(
-    ChainId.TESTNET,
+  [ChainID.HmyTestnet]: new Token(
+    ChainID.HmyTestnet,
     '0x7198682C2Ba36E0823401189da82F4f9402d82c8',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+
+  [ChainID.Default]: new Token(
+    ChainID.Default,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.EthMainnet]: new Token(
+    ChainID.EthMainnet,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.Morden]: new Token(
+    ChainID.Morden,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.Ropsten]: new Token(
+    ChainID.Ropsten,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.Rinkeby]: new Token(
+    ChainID.Rinkeby,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.RootstockMainnet]: new Token(
+    ChainID.RootstockMainnet,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.RootstockTestnet]: new Token(
+    ChainID.RootstockTestnet,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.Kovan]: new Token(
+    ChainID.Kovan,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.EtcMainnet]: new Token(
+    ChainID.EtcMainnet,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.EtcTestnet]: new Token(
+    ChainID.EtcTestnet,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.Geth]: new Token(
+    ChainID.Geth,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.Ganache]: new Token(
+    ChainID.Ganache,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.HmyLocal]: new Token(
+    ChainID.HmyLocal,
+    '0x0000000000000000000000000000000000000000',
+    18,
+    'WONE',
+    'Wrapped ONE'
+  ),
+  [ChainID.HmyPangaea]: new Token(
+    ChainID.HmyPangaea,
+    '0x0000000000000000000000000000000000000000',
     18,
     'WONE',
     'Wrapped ONE'
