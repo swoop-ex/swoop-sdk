@@ -10,7 +10,7 @@
   ],
   "repository": "https://github.com/SebastianJ/swoop-sdk.git",
   "keywords": [
-    "uniswap",
+    "swoop",
     "ethereum"
   ],
   "module": "dist/sdk.esm.js",
