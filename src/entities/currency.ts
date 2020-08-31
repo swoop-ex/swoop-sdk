@@ -21,7 +21,7 @@ export class Currency {
   /**
    * Add support for ONE
    */
-  public static readonly ONE: Currency = new Currency(18, 'ONE', 'Harmony')
+  public static readonly HARMONY: Currency = new Currency(18, 'ONE', 'Harmony')
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
@@ -41,5 +41,5 @@ export class Currency {
 const ETHER = Currency.ETHER
 export { ETHER }
 
-const ONE = Currency.ONE
-export { ONE }
+const HARMONY = Currency.HARMONY
+export { HARMONY }
