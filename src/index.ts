@@ -3,7 +3,7 @@ export { JSBI }
 
 export {
   BigintIsh,
-  ChainId,
+  //ChainId,
   TradeType,
   Rounding,
   FACTORY_ADDRESS,
