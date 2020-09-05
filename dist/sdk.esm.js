@@ -10,7 +10,7 @@ import { keccak256, pack } from '@ethersproject/solidity';
 import { Contract } from '@ethersproject/contracts';
 import { getNetwork } from '@ethersproject/networks';
 import { getDefaultProvider } from '@ethersproject/providers';
-import IUniswapV2Pair from '@uniswap/v2-core/build/IUniswapV2Pair.json';
+import IUniswapV2Pair from '@harmony-swoop/core/build/contracts/IUniswapV2Pair.json';
 
 var _SOLIDITY_TYPE_MAXIMA;
 /*export enum ChainId {
@@ -34,7 +34,7 @@ var Rounding;
 })(Rounding || (Rounding = {}));
 
 var FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f';
-var INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f';
+var INIT_CODE_HASH = '0x087cb7f0c4f3c8b377fca409d1e9dcbce23ba3ec9509c938739373196fb3afba';
 var MINIMUM_LIQUIDITY = /*#__PURE__*/JSBI.BigInt(1000); // exports for internal consumption
 
 var ZERO = /*#__PURE__*/JSBI.BigInt(0);
