@@ -56,7 +56,11 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
-export const WONE = {
+export type EnumDictionary<T extends string | symbol | number, U> = {
+    [K in T]: U;
+};
+
+export const WONE: EnumDictionary<ChainID, Token> = {
   [ChainID.HmyMainnet]: new Token(
     ChainID.HmyMainnet,
     '0x92bEad480f51B3513dA9c419C850613Ac50bd6ad',
