@@ -19,8 +19,8 @@ export enum Rounding {
   ROUND_UP
 }
 
-// Testnet address: 0xd6caba39168812e25ec491ec5e44290b35a34467 - deployed 2020-10-02 18:56 UTC
-export const FACTORY_ADDRESS = '0xd6caba39168812e25ec491ec5e44290b35a34467'
+// Testnet address: 0xd8a245380f26215b872c09df6b3903a9447cf77a - deployed 2020-10-02 20:13 UTC
+export const FACTORY_ADDRESS = '0xd8a245380f26215b872c09df6b3903a9447cf77a'
 
 export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
 
