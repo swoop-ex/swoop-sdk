@@ -13,16 +13,9 @@
     "swoop"
   ],
   "module": "dist/sdk.esm.js",
-  "scripts": {
-    "lint": "tsdx lint src test",
-    "build": "tsdx build",
-    "start": "tsdx watch",
-    "test": "tsdx test",
-    "prepublishOnly": "tsdx build"
-  },
   "dependencies": {
-    "@harmony-js/core": "^0.1.53",
-    "@harmony-swoop/core": "1.1.1",
+    "@harmony-js/core": "^0.1.55",
+    "@harmony-swoop/core": "^1.2.0",
     "big.js": "^5.2.2",
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.1",
@@ -55,5 +48,12 @@
     "printWidth": 120,
     "semi": false,
     "singleQuote": true
+  },
+  "scripts": {
+    "lint": "tsdx lint src test",
+    "build": "tsdx build",
+    "start": "tsdx watch",
+    "test": "tsdx test",
+    "prepublishOnly": "tsdx build"
   }
 }
