@@ -70,7 +70,7 @@ export const WONE: EnumDictionary<ChainID, Token> = {
   ),
   [ChainID.HmyTestnet]: new Token(
     ChainID.HmyTestnet,
-    '0x67eaaae974afe4fff1cead04ebbaa748a7bef8ab',
+    '0x67EaaAE974AFe4ffF1cEAd04EbbAA748a7BEF8aB',
     18,
     'WONE',
     'Wrapped ONE'
