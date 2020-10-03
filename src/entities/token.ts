@@ -60,118 +60,20 @@ export type EnumDictionary<T extends string | symbol | number, U> = {
     [K in T]: U;
 };
 
+// @ts-ignore TS2740 ignore incomplete dictionary
 export const WONE: EnumDictionary<ChainID, Token> = {
   [ChainID.HmyMainnet]: new Token(
     ChainID.HmyMainnet,
     '0x92bEad480f51B3513dA9c419C850613Ac50bd6ad',
     18,
     'WONE',
-    'Wrapped ONE'
+    'Wrapped ONE',
   ),
   [ChainID.HmyTestnet]: new Token(
     ChainID.HmyTestnet,
     '0x67EaaAE974AFe4ffF1cEAd04EbbAA748a7BEF8aB',
     18,
     'WONE',
-    'Wrapped ONE'
+    'Wrapped ONE',
   ),
-
-  [ChainID.Default]: new Token(
-    ChainID.Default,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.EthMainnet]: new Token(
-    ChainID.EthMainnet,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.Morden]: new Token(
-    ChainID.Morden,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.Ropsten]: new Token(
-    ChainID.Ropsten,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.Rinkeby]: new Token(
-    ChainID.Rinkeby,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.RootstockMainnet]: new Token(
-    ChainID.RootstockMainnet,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.RootstockTestnet]: new Token(
-    ChainID.RootstockTestnet,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.Kovan]: new Token(
-    ChainID.Kovan,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.EtcMainnet]: new Token(
-    ChainID.EtcMainnet,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.EtcTestnet]: new Token(
-    ChainID.EtcTestnet,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.Geth]: new Token(
-    ChainID.Geth,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.Ganache]: new Token(
-    ChainID.Ganache,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.HmyLocal]: new Token(
-    ChainID.HmyLocal,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  ),
-  [ChainID.HmyPangaea]: new Token(
-    ChainID.HmyPangaea,
-    '0x0000000000000000000000000000000000000000',
-    18,
-    'WONE',
-    'Wrapped ONE'
-  )
-}
+};
