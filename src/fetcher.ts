@@ -3,11 +3,11 @@ import { getNetwork } from '@ethersproject/networks'
 import { getDefaultProvider } from '@ethersproject/providers'
 import { TokenAmount } from './entities/fractions/tokenAmount'
 import { Pair } from './entities/pair'
-import IUniswapV2Pair from '@harmony-swoop/core/build/contracts/IUniswapV2Pair.json'
+import IUniswapV2Pair from '@swoop-exchange/core/build/contracts/IUniswapV2Pair.json'
 import invariant from 'tiny-invariant'
 import ERC20 from './abis/ERC20.json'
 import { Token } from './entities/token'
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 
 let TOKEN_DECIMALS_CACHE: { [chainId: number]: { [address: string]: number } } = {
   [ChainID.HmyMainnet]: {

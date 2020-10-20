@@ -1,5 +1,5 @@
 import invariant from 'tiny-invariant'
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 import { validateAndParseAddress } from '../utils'
 import { Currency } from './currency'
 
@@ -57,8 +57,8 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 }
 
 export type EnumDictionary<T extends string | symbol | number, U> = {
-    [K in T]: U;
-};
+  [K in T]: U
+}
 
 // @ts-ignore TS2740 ignore incomplete dictionary
 export const WONE: EnumDictionary<ChainID, Token> = {
@@ -67,13 +67,13 @@ export const WONE: EnumDictionary<ChainID, Token> = {
     '0xcF664087a5bB0237a0BAd6742852ec6c8d69A27a', // deployed 2020-10-20 12:42 UTC
     18,
     'WONE',
-    'Wrapped ONE',
+    'Wrapped ONE'
   ),
   [ChainID.HmyTestnet]: new Token(
     ChainID.HmyTestnet,
     '0x7466d7d0C21Fa05F32F5a0Fa27e12bdC06348Ce2', // deployed 2020-10-20 12:42 UTC
     18,
     'WONE',
-    'Wrapped ONE',
-  ),
-};
+    'Wrapped ONE'
+  )
+}

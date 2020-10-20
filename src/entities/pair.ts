@@ -4,7 +4,7 @@ import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
 import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 
 import {
   BigintIsh,
@@ -15,7 +15,7 @@ import {
   ONE,
   FIVE,
   _997,
-  _1000,
+  _1000
 } from '../constants'
 
 import { sqrt, parseBigintIsh } from '../utils'

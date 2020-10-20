@@ -1,4 +1,4 @@
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 import invariant from 'tiny-invariant'
 
 import { Currency, HARMONY } from './currency'

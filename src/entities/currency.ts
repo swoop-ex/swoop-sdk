@@ -14,8 +14,7 @@ export class Currency {
   public readonly name?: string
 
   /**
-   * The only instance of the base class `Currency`.
-  */
+   * The only instance of the base class `Currency`.*/
   public static readonly HARMONY: Currency = new Currency(18, 'ONE', 'Harmony')
 
   /**
