@@ -1,6 +1,6 @@
 import invariant from 'tiny-invariant'
 
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 
 import { ONE, TradeType, ZERO } from '../constants'
 import { sortedInsert } from '../utils'

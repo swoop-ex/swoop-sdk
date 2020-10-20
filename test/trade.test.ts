@@ -1,17 +1,6 @@
 import JSBI from 'jsbi'
-import { ChainID } from '@harmony-js/utils';
-import {
-  HARMONY,
-  CurrencyAmount,
-  Pair,
-  Percent,
-  Route,
-  Token,
-  TokenAmount,
-  Trade,
-  TradeType,
-  WONE
-} from '../src'
+import { ChainID } from '@harmony-js/utils'
+import { HARMONY, CurrencyAmount, Pair, Percent, Route, Token, TokenAmount, Trade, TradeType, WONE } from '../src'
 
 describe('Trade', () => {
   const token0 = new Token(ChainID.HmyMainnet, '0x0000000000000000000000000000000000000001', 18, 't0')

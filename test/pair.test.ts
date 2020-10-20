@@ -1,4 +1,4 @@
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 import { Token, Pair, TokenAmount, WONE, Price } from '../src'
 
 describe('Pair', () => {

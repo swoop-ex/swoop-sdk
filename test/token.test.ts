@@ -1,4 +1,4 @@
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 import { Token } from '../src'
 
 describe('Token', () => {
@@ -7,23 +7,27 @@ describe('Token', () => {
 
   describe('#equals', () => {
     it('fails if address differs', () => {
-      expect(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18).equals(new Token(ChainID.HmyMainnet, ADDRESS_TWO, 18))).toBe(
-        false
-      )
+      expect(
+        new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18).equals(new Token(ChainID.HmyMainnet, ADDRESS_TWO, 18))
+      ).toBe(false)
     })
 
     it('false if chain id differs', () => {
-      expect(new Token(ChainID.HmyTestnet, ADDRESS_ONE, 18).equals(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18))).toBe(
-        false
-      )
+      expect(
+        new Token(ChainID.HmyTestnet, ADDRESS_ONE, 18).equals(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18))
+      ).toBe(false)
     })
 
     it('true if only decimals differs', () => {
-      expect(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 9).equals(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18))).toBe(true)
+      expect(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 9).equals(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18))).toBe(
+        true
+      )
     })
 
     it('true if address is the same', () => {
-      expect(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18).equals(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18))).toBe(true)
+      expect(
+        new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18).equals(new Token(ChainID.HmyMainnet, ADDRESS_ONE, 18))
+      ).toBe(true)
     })
 
     it('true on reference equality', () => {

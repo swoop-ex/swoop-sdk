@@ -1,5 +1,5 @@
 import invariant from 'tiny-invariant'
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 import { CurrencyAmount, HARMONY, Pair, Percent, Route, Router, Token, TokenAmount, Trade, WONE } from '../src'
 import JSBI from 'jsbi'
 
@@ -68,7 +68,10 @@ describe('Router', () => {
     describe('exact out', () => {
       it('ether to token1', () => {
         const result = Router.swapCallParameters(
-          Trade.exactOut(new Route([pair_wone_0, pair_0_1], HARMONY, token1), new TokenAmount(token1, JSBI.BigInt(100))),
+          Trade.exactOut(
+            new Route([pair_wone_0, pair_0_1], HARMONY, token1),
+            new TokenAmount(token1, JSBI.BigInt(100))
+          ),
           { ttl: 50, recipient: '0x0000000000000000000000000000000000000004', allowedSlippage: new Percent('1', '100') }
         )
         expect(result.methodName).toEqual('swapETHForExactTokens')
@@ -134,7 +137,10 @@ describe('Router', () => {
         })
         it('token1 to ether', () => {
           const result = Router.swapCallParameters(
-            Trade.exactIn(new Route([pair_0_1, pair_wone_0], token1, HARMONY), new TokenAmount(token1, JSBI.BigInt(100))),
+            Trade.exactIn(
+              new Route([pair_0_1, pair_wone_0], token1, HARMONY),
+              new TokenAmount(token1, JSBI.BigInt(100))
+            ),
             {
               ttl: 50,
               recipient: '0x0000000000000000000000000000000000000004',
@@ -193,7 +199,10 @@ describe('Router', () => {
         it('token1 to ether', () => {
           expect(() =>
             Router.swapCallParameters(
-              Trade.exactOut(new Route([pair_0_1, pair_wone_0], token1, HARMONY), CurrencyAmount.ether(JSBI.BigInt(100))),
+              Trade.exactOut(
+                new Route([pair_0_1, pair_wone_0], token1, HARMONY),
+                CurrencyAmount.ether(JSBI.BigInt(100))
+              ),
               {
                 ttl: 50,
                 recipient: '0x0000000000000000000000000000000000000004',

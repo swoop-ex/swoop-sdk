@@ -1,4 +1,4 @@
-import { ChainID } from '@harmony-js/utils';
+import { ChainID } from '@harmony-js/utils'
 import { Token, TokenAmount, Pair, InsufficientInputAmountError } from '../src'
 import { sortedInsert } from '../src/utils'
 
