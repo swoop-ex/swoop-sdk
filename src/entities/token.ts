@@ -64,14 +64,14 @@ export type EnumDictionary<T extends string | symbol | number, U> = {
 export const WONE: EnumDictionary<ChainID, Token> = {
   [ChainID.HmyMainnet]: new Token(
     ChainID.HmyMainnet,
-    '0x92bEad480f51B3513dA9c419C850613Ac50bd6ad',
+    '0xe5b28FFDe40C746D61554099fd31a9b3C7453638',
     18,
     'WONE',
     'Wrapped ONE',
   ),
   [ChainID.HmyTestnet]: new Token(
     ChainID.HmyTestnet,
-    '0x595dfbe0dcd9711959c4d47d02bc77f18527e010', // deployed 2020-10-07 21:11 UTC
+    '0xa772D488bc4F66d84bC675B168528673896eAA85', // deployed 2020-10-07 21:11 UTC
     18,
     'WONE',
     'Wrapped ONE',
