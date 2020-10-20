@@ -47,12 +47,12 @@ export interface SwapParameters {
   value: string
 }
 
-/*function toHex(currencyAmount: CurrencyAmount) {
+function toHex(currencyAmount: CurrencyAmount) {
   return `0x${currencyAmount.raw.toString(16)}`
-}*/
+}
 
 function toNumberString(currencyAmount: CurrencyAmount) {
-  return currencyAmount.raw.toString(16)
+  return BigNumber.from(toHex(currencyAmount)).toString()
 }
 
 //const ZERO_HEX = '0x0'
