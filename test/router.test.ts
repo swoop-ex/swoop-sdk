@@ -27,11 +27,11 @@ describe('Router', () => {
         )
         expect(result.methodName).toEqual('swapExactETHForTokens')
         expect(result.args.slice(0, -1)).toEqual([
-          '51',
+          '81',
           [WONE[ChainID.HmyMainnet].address, token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
-        expect(result.value).toEqual('64')
+        expect(result.value).toEqual('100')
         checkDeadline(result.args[result.args.length - 1])
       })
       it('token1 to ether', () => {
@@ -41,8 +41,8 @@ describe('Router', () => {
         )
         expect(result.methodName).toEqual('swapExactTokensForETH')
         expect(result.args.slice(0, -1)).toEqual([
-          '64',
-          '51',
+          '100',
+          '81',
           [token1.address, token0.address, WONE[ChainID.HmyMainnet].address],
           '0x0000000000000000000000000000000000000004'
         ])
@@ -56,8 +56,8 @@ describe('Router', () => {
         )
         expect(result.methodName).toEqual('swapExactTokensForTokens')
         expect(result.args.slice(0, -1)).toEqual([
-          '64',
-          '59',
+          '100',
+          '89',
           [token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
@@ -76,11 +76,11 @@ describe('Router', () => {
         )
         expect(result.methodName).toEqual('swapETHForExactTokens')
         expect(result.args.slice(0, -1)).toEqual([
-          '64',
+          '100',
           [WONE[ChainID.HmyMainnet].address, token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
-        expect(result.value).toEqual('80')
+        expect(result.value).toEqual('128')
         checkDeadline(result.args[result.args.length - 1])
       })
       it('token1 to ether', () => {
@@ -90,8 +90,8 @@ describe('Router', () => {
         )
         expect(result.methodName).toEqual('swapTokensForExactETH')
         expect(result.args.slice(0, -1)).toEqual([
-          '64',
-          '80',
+          '100',
+          '128',
           [token1.address, token0.address, WONE[ChainID.HmyMainnet].address],
           '0x0000000000000000000000000000000000000004'
         ])
@@ -105,8 +105,8 @@ describe('Router', () => {
         )
         expect(result.methodName).toEqual('swapTokensForExactTokens')
         expect(result.args.slice(0, -1)).toEqual([
-          '64',
-          '71',
+          '100',
+          '113',
           [token0.address, token1.address],
           '0x0000000000000000000000000000000000000004'
         ])
@@ -128,11 +128,11 @@ describe('Router', () => {
           )
           expect(result.methodName).toEqual('swapExactETHForTokensSupportingFeeOnTransferTokens')
           expect(result.args.slice(0, -1)).toEqual([
-            '51',
+            '81',
             [WONE[ChainID.HmyMainnet].address, token0.address, token1.address],
             '0x0000000000000000000000000000000000000004'
           ])
-          expect(result.value).toEqual('64')
+          expect(result.value).toEqual('100')
           checkDeadline(result.args[result.args.length - 1])
         })
         it('token1 to ether', () => {
@@ -150,8 +150,8 @@ describe('Router', () => {
           )
           expect(result.methodName).toEqual('swapExactTokensForETHSupportingFeeOnTransferTokens')
           expect(result.args.slice(0, -1)).toEqual([
-            '64',
-            '51',
+            '100',
+            '81',
             [token1.address, token0.address, WONE[ChainID.HmyMainnet].address],
             '0x0000000000000000000000000000000000000004'
           ])
@@ -170,8 +170,8 @@ describe('Router', () => {
           )
           expect(result.methodName).toEqual('swapExactTokensForTokensSupportingFeeOnTransferTokens')
           expect(result.args.slice(0, -1)).toEqual([
-            '64',
-            '59',
+            '100',
+            '89',
             [token0.address, token1.address],
             '0x0000000000000000000000000000000000000004'
           ])
