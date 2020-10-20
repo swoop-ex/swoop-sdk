@@ -1396,10 +1396,10 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@swoop-exchange/core@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@swoop-exchange/core/-/core-1.0.0.tgz#c1edad4b7d2a8d30fac5b2bff9935f17da0c8bc9"
-  integrity sha512-/rVROYh6JxqT9nmmeopzFtNr6P3pZFeY5wl+VmFRb5yURKQD2lszlLhU0pj5YWR6PV1XEUGotPzEV0nj2J2njA==
+"@swoop-exchange/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@swoop-exchange/core/-/core-1.0.1.tgz#66b3af324354d152242a8b0c9c51b0fa5e729702"
+  integrity sha512-7YPRtILgtWHZgG65qYxOueSywMtU3LKSTxda9CUxc/SOpMGmvBZsEDLVnHqi1OqISvbdewKRVQj8EYhcQFjmyA==
 
 "@types/babel__core@^7.1.0":
   version "7.1.10"
