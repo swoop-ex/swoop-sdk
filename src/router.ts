@@ -2,6 +2,7 @@ import { TradeType } from './constants'
 import invariant from 'tiny-invariant'
 import { validateAndParseAddress } from './utils'
 import { CurrencyAmount, HARMONY, Percent, Trade } from './entities'
+import { BigNumber } from '@ethersproject/bignumber'
 
 /**
  * Options for producing the arguments to send call to the router.
@@ -46,11 +47,16 @@ export interface SwapParameters {
   value: string
 }
 
-function toHex(currencyAmount: CurrencyAmount) {
+/*function toHex(currencyAmount: CurrencyAmount) {
   return `0x${currencyAmount.raw.toString(16)}`
+}*/
+
+function toNumberString(currencyAmount: CurrencyAmount) {
+  return currencyAmount.raw.toString(16)
 }
 
-const ZERO_HEX = '0x0'
+//const ZERO_HEX = '0x0'
+const ZERO_VALUE = '0'
 
 /**
  * Represents the Uniswap V2 Router, and has static methods for helping execute trades.
@@ -73,10 +79,13 @@ export abstract class Router {
     invariant(options.ttl > 0, 'TTL')
 
     const to: string = validateAndParseAddress(options.recipient)
-    const amountIn: string = toHex(trade.maximumAmountIn(options.allowedSlippage))
-    const amountOut: string = toHex(trade.minimumAmountOut(options.allowedSlippage))
+    // For @harmony-js/core numbers have to be submitted as strings and not in hex format
+    const amountIn: string = toNumberString(trade.maximumAmountIn(options.allowedSlippage))
+    const amountOut: string = toNumberString(trade.minimumAmountOut(options.allowedSlippage))
     const path: string[] = trade.route.path.map(token => token.address)
-    const deadline = `0x${(Math.floor(new Date().getTime() / 1000) + options.ttl).toString(16)}`
+    const deadline = BigNumber.from(
+      `0x${(Math.floor(new Date().getTime() / 1000) + options.ttl).toString(16)}`
+    ).toString()
     const useFeeOnTransfer = Boolean(options.feeOnTransfer)
 
     let methodName: string
@@ -93,14 +102,14 @@ export abstract class Router {
           methodName = useFeeOnTransfer ? 'swapExactTokensForETHSupportingFeeOnTransferTokens' : 'swapExactTokensForETH'
           // (uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
           args = [amountIn, amountOut, path, to, deadline]
-          value = ZERO_HEX
+          value = ZERO_VALUE
         } else {
           methodName = useFeeOnTransfer
             ? 'swapExactTokensForTokensSupportingFeeOnTransferTokens'
             : 'swapExactTokensForTokens'
           // (uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
           args = [amountIn, amountOut, path, to, deadline]
-          value = ZERO_HEX
+          value = ZERO_VALUE
         }
         break
       case TradeType.EXACT_OUTPUT:
@@ -114,12 +123,12 @@ export abstract class Router {
           methodName = 'swapTokensForExactETH'
           // (uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
           args = [amountOut, amountIn, path, to, deadline]
-          value = ZERO_HEX
+          value = ZERO_VALUE
         } else {
           methodName = 'swapTokensForExactTokens'
           // (uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
           args = [amountOut, amountIn, path, to, deadline]
-          value = ZERO_HEX
+          value = ZERO_VALUE
         }
         break
     }
