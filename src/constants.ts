@@ -19,8 +19,8 @@ export enum Rounding {
   ROUND_UP
 }
 
-// Testnet address: 0xCCf972434ca00Cf48F2B91040F91e9111C571D3d - deployed 2020-10-20 19:18 UTC
-export const FACTORY_ADDRESS = '0xCCf972434ca00Cf48F2B91040F91e9111C571D3d'
+// Testnet address: 0xB1ecBC113FE15a97075F6F6Af439750543C961B4 - deployed 2020-10-20 19:58 UTC
+export const FACTORY_ADDRESS = '0xB1ecBC113FE15a97075F6F6Af439750543C961B4'
 
 // Original Uniswap code hash: 0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f
 // INIT_CODE_HASH derived from @swoop-exchange/core/build/contracts/UniswapV2Pair.json bytecode -> keccak256(['bytes'], [`0x${bytecode}`])
