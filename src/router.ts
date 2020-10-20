@@ -2,6 +2,7 @@ import { TradeType } from './constants'
 import invariant from 'tiny-invariant'
 import { validateAndParseAddress } from './utils'
 import { CurrencyAmount, HARMONY, Percent, Trade } from './entities'
+import { BigNumber } from '@ethersproject/bignumber'
 
 /**
  * Options for producing the arguments to send call to the router.
@@ -82,7 +83,9 @@ export abstract class Router {
     const amountIn: string = toNumberString(trade.maximumAmountIn(options.allowedSlippage))
     const amountOut: string = toNumberString(trade.minimumAmountOut(options.allowedSlippage))
     const path: string[] = trade.route.path.map(token => token.address)
-    const deadline = (Math.floor(new Date().getTime() / 1000) + options.ttl).toString(16)
+    const deadline = BigNumber.from(
+      `0x${(Math.floor(new Date().getTime() / 1000) + options.ttl).toString(16)}`
+    ).toString()
     const useFeeOnTransfer = Boolean(options.feeOnTransfer)
 
     let methodName: string

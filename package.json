@@ -51,7 +51,7 @@
   },
   "scripts": {
     "lint": "tsdx lint src test",
-    "lint:fix": "tsdx lint --fix src test",
+    "lint:fix": "tsdx lint src test --fix --write-file",
     "build": "tsdx build",
     "start": "tsdx watch",
     "test": "tsdx test",
