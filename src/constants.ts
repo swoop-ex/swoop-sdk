@@ -25,8 +25,8 @@ export const FACTORY_ADDRESS = '0xF59956Bab4b1a3E6122bD04AA6f58B16641dcBfE'
 
 // Original Uniswap code hash: 0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f
 // INIT_CODE_HASH derived from @swoop-exchange/core/build/contracts/UniswapV2Pair.json bytecode -> keccak256(['bytes'], [`0x${bytecode}`])
-// Updated 2020-10-07 21:11 UTC
-export const INIT_CODE_HASH = '0x87356c32b1d11f0ecc268fbd499639821bf3bcbd0547a703a3437ff4673abb84'
+// Updated 2020-10-23 11:09 UTC due to changing swoop-core -> UniswapV2ERC20.sol to use Swoop / SWP token name & Symbol
+export const INIT_CODE_HASH = '0xe3c4d7c2f0f0eb6af0a666a9b54ea1196dd3676e4e4b696af853d8951f807cc5'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
