@@ -19,13 +19,14 @@ export enum Rounding {
   ROUND_UP
 }
 
-// Testnet address: 0x3204Af74097C8fb26ba6379EdBbBB933ca3d3d46 - deployed 2020-10-20 19:58 UTC
-export const FACTORY_ADDRESS = '0x3204Af74097C8fb26ba6379EdBbBB933ca3d3d46'
+// Testnet address: 0x95fcb04Afd86d1956e7574E52Ae2cb15450E2818 - deployed 2020-10-24 11:40 UTC
+// Mainnet address: 0x511EFE91a118ABE86cbd040d72DD957B0b5512F4 - deployed 2020-10-22 18:30 UTC
+export const FACTORY_ADDRESS = '0x95fcb04Afd86d1956e7574E52Ae2cb15450E2818'
 
 // Original Uniswap code hash: 0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f
 // INIT_CODE_HASH derived from @swoop-exchange/core/build/contracts/UniswapV2Pair.json bytecode -> keccak256(['bytes'], [`0x${bytecode}`])
-// Updated 2020-10-07 21:11 UTC
-export const INIT_CODE_HASH = '0x87356c32b1d11f0ecc268fbd499639821bf3bcbd0547a703a3437ff4673abb84'
+// Updated 2020-10-23 11:09 UTC due to changing swoop-core -> UniswapV2ERC20.sol to use Swoop / SWP token name & Symbol
+export const INIT_CODE_HASH = '0xe3c4d7c2f0f0eb6af0a666a9b54ea1196dd3676e4e4b696af853d8951f807cc5'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
