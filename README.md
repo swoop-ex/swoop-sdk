@@ -1,7 +1,7 @@
 # Uniswap SDK
 
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
-[![Actions Status](https://github.com/harmony-one/swoop-sdk/workflows/CI/badge.svg)](https://github.com/harmony-one/swoop-sdk)
+[![Actions Status](https://github.com/swoop-ex/swoop-sdk/workflows/CI/badge.svg)](https://github.com/swoop-ex/swoop-sdk)
 [![npm version](https://img.shields.io/npm/v/@uniswap/sdk/latest.svg)](https://www.npmjs.com/package/@swoop-exchange/sdk/v/latest)
 [![npm bundle size (scoped version)](https://img.shields.io/bundlephobia/minzip/@uniswap/sdk/latest.svg)](https://bundlephobia.com/result?p=@swoop-exchange/sdk@latest)
 
@@ -14,7 +14,7 @@ To run the tests, follow these steps. You must have at least node v10 and [yarn]
 First clone the repository:
 
 ```sh
-git clone https://github.com/harmony-one/swoop-sdk.git
+git clone https://github.com/swoop-ex/swoop-sdk.git
 ```
 
 Move into the swoop-sdk working directory
